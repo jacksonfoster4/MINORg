@@ -39,7 +39,7 @@ RUN pip install --no-cache minorg
 RUN python -c 'import os; print(os.getcwd()); print(os.listdir())'
 ENV MINORG_IN_DOCKER Yes
 WORKDIR ..
-ENTRYPOINT ["bash"]
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 # ENTRYPOINT ["minorg"]
 # CMD ["python", "./minorg/main.py"]
 # CMD ["python", "-c", "'import os; print(os.getcwd()); print(os.listdir())'"]
